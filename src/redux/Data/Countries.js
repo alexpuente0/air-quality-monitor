@@ -9,5 +9,4 @@ const countriesSlice = createSlice({
   reducers: {},
 });
 
-export const { getCountries, changeCountry } = countriesSlice.actions;
 export default countriesSlice.reducer;

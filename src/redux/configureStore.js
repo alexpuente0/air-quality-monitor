@@ -1,8 +1,15 @@
-import { configureStore } from '@reduxjs/toolkit';
-import countriesReducer from './Data/Countries';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
+import fetchAll, { allReducer } from './world/world';
+import { countryPollutionReducer } from './pollution/pollution';
 
-export default configureStore({
-  reducer: {
-    countries: countriesReducer,
-  },
+const reducer = combineReducers({
+  allReducer,
+  countryPollutionReducer,
 });
+
+const store = createStore(reducer, applyMiddleware(logger, thunk));
+store.dispatch(fetchAll());
+
+export default store;

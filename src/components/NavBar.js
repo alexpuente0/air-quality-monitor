@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import {
-  IoColorPaletteSharp,
   IoCloseSharp,
   IoChevronBackSharp,
+  IoContrastOutline,
 } from 'react-icons/io5';
 import { useState } from 'react';
 import './styles/navBar.scss';
@@ -55,7 +55,7 @@ const Navbar = () => {
         </li>
         <li className="nav-item">Air Quality World Monitor</li>
         <li>
-          <IoColorPaletteSharp
+          <IoContrastOutline
             data-testid="icon"
             className="nav-icon"
             onClick={() => setModalVisible(!modalVisible)}

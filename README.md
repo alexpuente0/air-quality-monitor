@@ -18,7 +18,9 @@ In this project we created a SPA using React
 
 Check out the live project [here](https://papaya-kringle-4074c4.netlify.app)
 
-## Demo
+## Demo Video
+
+[Video](https://www.loom.com/share/dc25afaf78754c6b8232fe872a2d580f)
 
 
 ## Installation

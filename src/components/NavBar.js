@@ -12,12 +12,12 @@ const Navbar = () => {
 
   const [modalVisible, setModalVisible] = useState(false);
   const [theme, setTheme] = useState({
-    color: ['Pink', 'Blue'],
-    isPink: true,
+    color: [' Magenta', ' Cyan'],
+    isMagenta: true,
   });
 
   const handleTheme = () => {
-    if (theme.isPink) {
+    if (theme.isMagenta) {
       document.documentElement.style.setProperty('--primary-color', '#2a4476');
       document.documentElement.style.setProperty(
         '--secondary-color',
@@ -40,7 +40,7 @@ const Navbar = () => {
         '#ac144e',
       );
     }
-    setTheme({ ...theme, isPink: !theme.isPink });
+    setTheme({ ...theme, isMagenta: !theme.isMagenta });
   };
 
   return (
@@ -51,7 +51,6 @@ const Navbar = () => {
             className="nav-icon"
             onClick={() => navigate(-1)}
           />
-
         </li>
         <li className="nav-item">Air Quality World Monitor</li>
         <li>
@@ -66,8 +65,8 @@ const Navbar = () => {
         <div className="modal">
           <div className="modal-content">
             <button className="theme" onClick={handleTheme} type="button">
-              Change Theme:
-              {theme.isPink ? theme.color[1] : theme.color[0]}
+              Change Theme to
+              {theme.isMagenta ? theme.color[1] : theme.color[0]}
             </button>
             <IoCloseSharp
               className="close"

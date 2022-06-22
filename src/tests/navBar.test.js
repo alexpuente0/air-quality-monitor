@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 // eslint-disable-next-line import/extensions
-import Navbar from '../components/navBar';
+import Navbar from '../components/navBar.js';
 
 const MockedNavbar = () => (
   <BrowserRouter>

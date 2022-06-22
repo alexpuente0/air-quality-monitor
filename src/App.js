@@ -1,16 +1,18 @@
-import { Routes, Route } from 'react-router';
-import './App.css';
-import Home from './pages/Home';
-import NavBar from './components/NavBar';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/home';
+// eslint-disable-next-line import/extensions
+import Navbar from './components/navBar';
+import Countries from './components/countries';
+import Details from './components/airStats';
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/:continent" element={<Home />} />
-        <Route path="/:continent/:country" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="/:continent" element={<Countries />} />
+        <Route path="/:continent/:country" element={<Details />} />
       </Routes>
     </div>
   );

@@ -1,10 +1,10 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import NavBar from '../components/navBar';
+import Navbar from '../components/navBar';
 
 const MockedNavbar = () => (
   <BrowserRouter>
-    <NavBar />
+    <Navbar />
   </BrowserRouter>
 );
 

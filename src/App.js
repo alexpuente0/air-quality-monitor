@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/home';
-import NavBar from './components/navBar';
+import Navbar from './components/navBar';
 import Countries from './components/countries';
 import Details from './components/airStats';
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/:continent" element={<Countries />} />

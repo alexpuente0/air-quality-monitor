@@ -1,9 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/home';
-// eslint-disable-next-line import/extensions
-import Navbar from './components/navBar';
 import Countries from './components/countries';
 import Details from './components/airStats';
+import Navbar from './components/navBar';
 
 function App() {
   return (
